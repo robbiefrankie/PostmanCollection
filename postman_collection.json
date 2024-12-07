@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "632bac74-57ff-4494-aaa2-23a59bcd086a",
+		"name": "MDM_API's",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36033290"
+	},
+	"item": [
+		{
+			"name": "QA_MDM_API",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "mdmadmin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "mdmadmin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<TCRMService\r\n\txmlns=\"http://www.ibm.com/mdm/schema\"\r\n\txmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.ibm.com/mdm/schema MDMDomains.xsd\">\r\n\t<RequestControl>\r\n\t\t<requestID>100005</requestID>\r\n\t\t<DWLControl>\r\n\t\t\t<requesterName>Robert</requesterName>\r\n\t\t\t<requesterLanguage>100</requesterLanguage>\r\n\t\t</DWLControl>\r\n\t</RequestControl>\r\n\t<TCRMTx>\r\n\t\t<TCRMTxType>addPerson</TCRMTxType>\r\n\t\t<TCRMTxObject>TCRMPersonBObj</TCRMTxObject>\r\n\t\t<TCRMObject>\r\n\t\t\t<TCRMPersonBObj>\r\n\t\t\t\t<PartyType>P</PartyType>\r\n\t\t\t\t<ClientStatusType>1</ClientStatusType>\r\n\t\t\t\t<TCRMPartyAddressBObj>\r\n\t\t\t\t\t<AddressUsageType>5</AddressUsageType>\r\n\t\t\t\t\t<TCRMAddressBObj>\r\n\t\t\t\t\t\t<AddressLineOne>9517 Seaview Avenue</AddressLineOne>\r\n\t\t\t\t\t\t<City>Calders</City>\r\n\t\t\t\t\t\t<ZipPostalCode>24261</ZipPostalCode>\r\n\t\t\t\t\t\t<ResidenceNumber>5415</ResidenceNumber>\r\n\t\t\t\t\t\t<ProvinceStateType>49</ProvinceStateType>\r\n\t\t\t\t\t\t<CountryType>183</CountryType>\r\n\t\t\t\t\t</TCRMAddressBObj>\r\n\t\t\t\t</TCRMPartyAddressBObj>\r\n\t\t\t\t<TCRMPartyContactMethodBObj>\r\n\t\t\t\t\t<ContactMethodUsageType>5</ContactMethodUsageType>\r\n\t\t\t\t\t<TCRMContactMethodBObj>\r\n\t\t\t\t\t\t<ReferenceNumber>579-135-7875</ReferenceNumber>\r\n\t\t\t\t\t\t<ContactMethodType>1</ContactMethodType>\r\n\t\t\t\t\t</TCRMContactMethodBObj>\r\n\t\t\t\t</TCRMPartyContactMethodBObj>\r\n\t\t\t\t<TCRMPartyContactMethodBObj>\r\n\t\t\t\t\t<ContactMethodUsageType>6</ContactMethodUsageType>\r\n\t\t\t\t\t<TCRMContactMethodBObj>\r\n\t\t\t\t\t\t<ReferenceNumber>schumaccer11@tinyurl.com</ReferenceNumber>\r\n\t\t\t\t\t\t<ContactMethodType>2</ContactMethodType>\r\n\t\t\t\t\t</TCRMContactMethodBObj>\r\n\t\t\t\t</TCRMPartyContactMethodBObj>\r\n\t\t\t\t<TCRMPartyIdentificationBObj>\r\n\t\t\t\t\t<IdentificationType>1</IdentificationType>\r\n\t\t\t\t\t<IdentificationNumber>155-83-16378</IdentificationNumber>\r\n\t\t\t\t</TCRMPartyIdentificationBObj>\r\n\t\t\t\t<TCRMAdminContEquivBObj>\r\n\t\t\t\t\t<AdminPartyId>AdminId</AdminPartyId>\r\n\t\t\t\t\t<AdminSystemType>2</AdminSystemType>\r\n\t\t\t\t</TCRMAdminContEquivBObj>\r\n\t\t\t\t<TCRMPersonNameBObj>\r\n\t\t\t\t\t<GenerationType>1</GenerationType>\r\n\t\t\t\t\t<NameUsageType>1</NameUsageType>\r\n\t\t\t\t\t<GivenNameOne>Wills Schumaccer</GivenNameOne>\r\n\t\t\t\t\t<GivenNameTwo>Bruce</GivenNameTwo>\r\n\t\t\t\t\t<LastName>Edgeify</LastName>\r\n\t\t\t\t\t<Suffix>KP</Suffix>\r\n\t\t\t\t</TCRMPersonNameBObj>\r\n\t\t\t</TCRMPersonBObj>\r\n\t\t</TCRMObject>\r\n\t</TCRMTx>\r\n</TCRMService>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.100.15.32:9081/com.ibm.mdm.server.ws.restful/resources/MDMWSRESTful",
+					"protocol": "http",
+					"host": [
+						"10",
+						"100",
+						"15",
+						"32"
+					],
+					"port": "9081",
+					"path": [
+						"com.ibm.mdm.server.ws.restful",
+						"resources",
+						"MDMWSRESTful"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"TCRMService\": {\r\n        \"@schemaLocation\": \"http://www.ibm.com/mdm/schema MDMDomains.xsd\",\r\n        \"RequestControl\": {\r\n            \"requestID\": \"0624\",\r\n            \"DWLControl\": {\r\n                \"requesterName\": \"Bhavadarani\",\r\n                \"requesterLanguage\": \"100\"\r\n            }\r\n        },\r\n        \"TCRMInquiry\": {\r\n            \"InquiryType\": \"getPerson\",\r\n            \"InquiryParam\": {\r\n                \"tcrmParam\": [\r\n                    {\r\n                        \"PartyId\": \"478371878759470112\"\r\n                    },\r\n                    {\r\n                        \"inquiryLevel\": \"4\"\r\n                    }\r\n                ]\r\n            }\r\n        }\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.100.15.32:9081/com.ibm.mdm.server.ws.restful/resources/MDMWSRESTful",
+					"protocol": "http",
+					"host": [
+						"10",
+						"100",
+						"15",
+						"32"
+					],
+					"port": "9081",
+					"path": [
+						"com.ibm.mdm.server.ws.restful",
+						"resources",
+						"MDMWSRESTful"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchPerson",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<TCRMService xmlns=\"http://www.ibm.com/mdm/schema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.ibm.com/mdm/schema MDMDomains.xsd\">\r\n    <RequestControl>\r\n        <requestID>100006</requestID>\r\n        <DWLControl>\r\n            <requesterName>Bhavadarani</requesterName>\r\n            <requesterLanguage>100</requesterLanguage>\r\n        </DWLControl>\r\n    </RequestControl>\r\n    <TCRMTx>\r\n        <TCRMTxType>searchPerson</TCRMTxType>\r\n        <TCRMTxObject>TCRMPersonSearchBObj</TCRMTxObject>\r\n        <TCRMObject>\r\n            <TCRMPersonSearchBObj>\r\n                <LastName>Edgeify</LastName>\r\n                <InquiryLevel>2</InquiryLevel>\r\n            </TCRMPersonSearchBObj>\r\n        </TCRMObject>\r\n    </TCRMTx>\r\n</TCRMService>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.100.15.32:9081/com.ibm.mdm.server.ws.restful/resources/MDMWSRESTful",
+					"protocol": "http",
+					"host": [
+						"10",
+						"100",
+						"15",
+						"32"
+					],
+					"port": "9081",
+					"path": [
+						"com.ibm.mdm.server.ws.restful",
+						"resources",
+						"MDMWSRESTful"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchContactReference",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<TCRMService xmlns=\"http://www.ibm.com/mdm/schema\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://www.ibm.com/mdm/schema MDMDomains.xsd\">\r\n    <RequestControl>\r\n        <requestID>100005</requestID>\r\n        <DWLControl>\r\n            <requesterName>Bhavadarani</requesterName>\r\n            <requesterLanguage>100</requesterLanguage>\r\n        </DWLControl>\r\n    </RequestControl>\r\n    <TCRMTx>\r\n        <TCRMTxType>searchPerson</TCRMTxType>\r\n        <TCRMTxObject>TCRMPersonSearchBObj</TCRMTxObject>\r\n        <TCRMObject>\r\n            <TCRMPersonSearchBObj>\r\n\t\t\t    <ContactMethodReferenceNumber>schumaccer11@tinyurl.com</ContactMethodReferenceNumber>\r\n\t\t\t\t<ContactMethodType>2</ContactMethodType>\r\n            </TCRMPersonSearchBObj>\r\n        </TCRMObject>\r\n    </TCRMTx>\r\n</TCRMService>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.100.15.32:9081/com.ibm.mdm.server.ws.restful/resources/MDMWSRESTful",
+					"protocol": "http",
+					"host": [
+						"10",
+						"100",
+						"15",
+						"32"
+					],
+					"port": "9081",
+					"path": [
+						"com.ibm.mdm.server.ws.restful",
+						"resources",
+						"MDMWSRESTful"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "mdmadmin",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "mdmadmin",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
